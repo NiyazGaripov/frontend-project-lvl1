@@ -16,3 +16,8 @@ const getRandomArrayItem = (array) => {
 
   return array[randomItem];
 };
+
+const greeting = () => {
+  userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+};
