@@ -62,3 +62,12 @@ const askQuestions = () => {
     }
   }
 };
+
+const startGame = () => {
+  console.log('Welcome to the Brain Games!');
+  greeting();
+  console.log('What is the result of the expression?');
+  askQuestions();
+};
+
+startGame();
