@@ -37,6 +37,9 @@ const buildGame = (gameConfig) => {
   }
 };
 
-const startGame = (gameConfig) => {};
+const startGame = (gameConfig) => {
+  greeting();
+  buildGame(gameConfig);
+};
 
 export default startGame;
