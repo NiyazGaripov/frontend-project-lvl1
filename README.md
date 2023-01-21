@@ -13,3 +13,8 @@
 ### Brain even
 
 [![asciicast](https://asciinema.org/a/jup1jsYFy01mY5zyDBOOxat27.svg)](https://asciinema.org/a/jup1jsYFy01mY5zyDBOOxat27)
+
+
+### Brain calc
+
+[![asciicast](https://asciinema.org/a/o6vAFHGruyZWTQYxEZZsLg7XN.svg)](https://asciinema.org/a/o6vAFHGruyZWTQYxEZZsLg7XN)
