@@ -5,3 +5,7 @@ export const getRandomArrayItem = (array) => {
 
   return array[randomItem];
 };
+
+export const getRandomNumberBetweenTwoValues = (min, max) => min
+  + Math.floor(Math.random()
+  * (max - min));
