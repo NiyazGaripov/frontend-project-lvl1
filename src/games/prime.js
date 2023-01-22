@@ -27,3 +27,14 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
 
   return result;
 });
+
+const startGameBrainPrime = () => {
+  const gameConfig = {
+    description,
+    gameData,
+  };
+
+  startGame(gameConfig);
+};
+
+export default startGameBrainPrime;
