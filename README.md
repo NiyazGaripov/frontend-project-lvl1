@@ -23,3 +23,8 @@
 ### Brain greatest common divisor
 
 [![asciicast](https://asciinema.org/a/jG2rOGEQHHfk6EKhaIXuoicDF.svg)](https://asciinema.org/a/jG2rOGEQHHfk6EKhaIXuoicDF)
+
+
+### Brain progression
+
+[![asciicast](https://asciinema.org/a/qCN8lPD5negDREYkjrLEy6Bk4.svg)](https://asciinema.org/a/qCN8lPD5negDREYkjrLEy6Bk4)
