@@ -30,3 +30,14 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
 
   return result;
 });
+
+const startGameBrainProgression = () => {
+  const gameConfig = {
+    description,
+    gameData,
+  };
+
+  startGame(gameConfig);
+};
+
+export default startGameBrainProgression;
