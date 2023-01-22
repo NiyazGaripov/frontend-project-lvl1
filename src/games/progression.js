@@ -16,3 +16,17 @@ const getArithmeticProgression = () => {
     .fill()
     .map((item, i) => (i + NTH_NUMBER_OF_PROGRESSION) * STEP_OF_PROGRESSION);
 };
+
+const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
+  const randomNumber = getRandomNumber(MAX_NUMBER);
+  const arithmeticProgression = getArithmeticProgression();
+  const missingValue = arithmeticProgression.splice(randomNumber, DELETE_COUNT, '..');
+  const rightAnswer = missingValue[0];
+
+  const result = {
+    question: `${arithmeticProgression.join(' ')}`,
+    rightAnswer: `${rightAnswer}`,
+  };
+
+  return result;
+});
