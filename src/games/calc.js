@@ -1,5 +1,5 @@
 import { getRandomNumber, getRandomArrayItem } from '../utils.js';
-import QUESTION_COUNT from '../constants.js';
+import { QUESTION_COUNT } from '../constants.js';
 import startGame from '../index.js';
 
 const MAX_NUMBER = 20;

@@ -1,8 +1,7 @@
 import { getRandomNumber } from '../utils.js';
-import QUESTION_COUNT from '../constants.js';
+import { QUESTION_COUNT, MAX_NUMBER } from '../constants.js';
 import startGame from '../index.js';
 
-const MAX_NUMBER = 100;
 const DIVIDER = 2;
 const description = 'Answer "yes" if the number is even, otherwise answer "no"';
 
