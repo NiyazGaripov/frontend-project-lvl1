@@ -28,3 +28,8 @@
 ### Brain progression
 
 [![asciicast](https://asciinema.org/a/qCN8lPD5negDREYkjrLEy6Bk4.svg)](https://asciinema.org/a/qCN8lPD5negDREYkjrLEy6Bk4)
+
+
+### Brain prime
+
+[![asciicast](https://asciinema.org/a/5cIWacY8rN2sszendBT7SR9F0.svg)](https://asciinema.org/a/5cIWacY8rN2sszendBT7SR9F0)
