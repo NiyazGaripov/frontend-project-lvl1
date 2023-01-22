@@ -22,3 +22,14 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
 
   return result;
 });
+
+const startGameBrainGcd = () => {
+  const gameConfig = {
+    description,
+    gameData,
+  };
+
+  startGame(gameConfig);
+};
+
+export default startGameBrainGcd;
