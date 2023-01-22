@@ -16,3 +16,14 @@ const isPrime = (value) => {
 
   return value > 1;
 };
+
+const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
+  const randomNumber = getRandomNumber(MAX_NUMBER);
+
+  const result = {
+    question: randomNumber,
+    rightAnswer: isPrime(randomNumber) ? 'yes' : 'no',
+  };
+
+  return result;
+});
