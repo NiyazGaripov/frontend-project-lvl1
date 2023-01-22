@@ -9,3 +9,16 @@ const getGreatestCommonDivisor = (firstOperand, secondOperand) => {
 
   return secondOperand ? getGreatestCommonDivisor(secondOperand, remainder) : firstOperand;
 };
+
+const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
+  const firstOperand = getRandomNumber(MAX_NUMBER);
+  const secondOperand = getRandomNumber(MAX_NUMBER);
+  const operationResult = getGreatestCommonDivisor(firstOperand, secondOperand);
+
+  const result = {
+    question: `${firstOperand} ${secondOperand}`,
+    rightAnswer: `${operationResult}`,
+  };
+
+  return result;
+});
