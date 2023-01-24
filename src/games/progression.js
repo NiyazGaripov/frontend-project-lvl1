@@ -9,12 +9,12 @@ const DELETE_COUNT = 1;
 const description = 'What number is missing in the progression?';
 
 const getArithmeticProgression = () => {
-  const NTH_NUMBER_OF_PROGRESSION = getRandomNumberBetweenTwoValues(MIN_NUMBER, MAX_NUMBER);
+  const nthNumberOfProgression = getRandomNumberBetweenTwoValues(MIN_NUMBER, MAX_NUMBER);
   const STEP_OF_PROGRESSION = getRandomNumberBetweenTwoValues(MIN_NUMBER, MAX_NUMBER);
 
   return Array(PROGRESSION_LENGTH)
     .fill()
-    .map((item, i) => (i + NTH_NUMBER_OF_PROGRESSION) * STEP_OF_PROGRESSION);
+    .map((item, i) => (i + nthNumberOfProgression) * STEP_OF_PROGRESSION);
 };
 
 const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
