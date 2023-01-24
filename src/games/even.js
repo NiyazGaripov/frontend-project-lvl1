@@ -9,7 +9,7 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
   const randomNumber = getRandomNumber(MAX_NUMBER);
 
   return {
-    question: randomNumber,
+    question: String(randomNumber),
     rightAnswer: randomNumber % DIVIDER === 0 ? 'yes' : 'no',
   };
 });
