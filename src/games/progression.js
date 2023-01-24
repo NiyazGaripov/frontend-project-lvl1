@@ -23,12 +23,10 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
   const missingValue = arithmeticProgression.splice(randomNumber, DELETE_COUNT, '..');
   const rightAnswer = missingValue[0];
 
-  const result = {
+  return {
     question: `${arithmeticProgression.join(' ')}`,
     rightAnswer: `${rightAnswer}`,
   };
-
-  return result;
 });
 
 const startGameBrainProgression = () => {

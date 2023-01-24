@@ -29,12 +29,10 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
   const operator = getRandomArrayItem(OPERATORS);
   const operationResult = calculateExpression(firstOperand, secondOperand, operator);
 
-  const result = {
+  return {
     question: `${firstOperand} ${operator} ${secondOperand}`,
     rightAnswer: `${operationResult}`,
   };
-
-  return result;
 });
 
 const startGameBrainCalc = () => {

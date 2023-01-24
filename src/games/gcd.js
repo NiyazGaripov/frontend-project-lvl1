@@ -15,12 +15,10 @@ const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
   const secondOperand = getRandomNumber(MAX_NUMBER);
   const operationResult = getGreatestCommonDivisor(firstOperand, secondOperand);
 
-  const result = {
+  return {
     question: `${firstOperand} ${secondOperand}`,
     rightAnswer: `${operationResult}`,
   };
-
-  return result;
 });
 
 const startGameBrainGcd = () => {

@@ -20,12 +20,10 @@ const isPrime = (value) => {
 const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
   const randomNumber = getRandomNumber(MAX_NUMBER);
 
-  const result = {
+  return {
     question: randomNumber,
     rightAnswer: isPrime(randomNumber) ? 'yes' : 'no',
   };
-
-  return result;
 });
 
 const startGameBrainPrime = () => {
