@@ -7,15 +7,19 @@ const OPERATORS = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const calculateExpression = (firstOperand, secondOperand, operator) => {
-  switch (operator) {
-    case '+':
-      return firstOperand + secondOperand;
-    case '-':
-      return firstOperand - secondOperand;
-    case '*':
-      return firstOperand * secondOperand;
-    default:
-      return `Please specify one of the listed operators ${OPERATORS}`;
+  try {
+    switch (operator) {
+      case '+':
+        return firstOperand + secondOperand;
+      case '-':
+        return firstOperand - secondOperand;
+      case '*':
+        return firstOperand * secondOperand;
+      default:
+        throw new Error(`Please specify one of the listed operators ${OPERATORS}`);
+    }
+  } catch (error) {
+    console.log(error);
   }
 };
 
