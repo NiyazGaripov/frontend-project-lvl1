@@ -1,31 +1,37 @@
 import { QUESTION_COUNT } from '../constants.js';
-import { getRandomNumber, getRandomNumberBetweenTwoValues } from '../utils.js';
+import { getRandomNumberBetweenTwoValues } from '../utils.js';
 import startGame from '../index.js';
 
-const MIN_NUMBER = 1;
-const MAX_NUMBER = 8;
+const START_VALUE = 1;
 const PROGRESSION_LENGTH = 10;
-const DELETE_COUNT = 1;
 const description = 'What number is missing in the progression?';
 
-const getArithmeticProgression = () => {
-  const nthNumberOfProgression = getRandomNumberBetweenTwoValues(MIN_NUMBER, MAX_NUMBER);
-  const STEP_OF_PROGRESSION = getRandomNumberBetweenTwoValues(MIN_NUMBER, MAX_NUMBER);
+const getArithmeticProgression = (start, step, indexOfMissingInteger) => {
+  let arithmeticProgression = '';
 
-  return Array(PROGRESSION_LENGTH)
-    .fill()
-    .map((item, i) => (i + nthNumberOfProgression) * STEP_OF_PROGRESSION);
+  for (let i = 0; i < PROGRESSION_LENGTH; i += 1) {
+    if (i === indexOfMissingInteger) {
+      arithmeticProgression += ' ..';
+    } else {
+      const currentValue = (i + start) * step;
+      arithmeticProgression += ` ${currentValue}`;
+    }
+  }
+
+  return arithmeticProgression;
 };
 
 const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
-  const randomNumber = getRandomNumber(MAX_NUMBER);
-  const arithmeticProgression = getArithmeticProgression();
-  const missingValue = arithmeticProgression.splice(randomNumber, DELETE_COUNT, '..');
-  const rightAnswer = missingValue[0];
+  const startInteger = getRandomNumberBetweenTwoValues(START_VALUE, PROGRESSION_LENGTH);
+  const stepOfProgression = getRandomNumberBetweenTwoValues(START_VALUE, PROGRESSION_LENGTH);
+  const indexOfMissingInteger = getRandomNumberBetweenTwoValues(0, PROGRESSION_LENGTH - 1);
+
+  const question = getArithmeticProgression(startInteger, stepOfProgression, indexOfMissingInteger);
+  const rightAnswer = String((startInteger + indexOfMissingInteger) * stepOfProgression);
 
   return {
-    question: `${arithmeticProgression.join(' ')}`,
-    rightAnswer: `${rightAnswer}`,
+    question,
+    rightAnswer,
   };
 });
 
