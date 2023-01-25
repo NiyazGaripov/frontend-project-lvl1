@@ -7,20 +7,27 @@ const OPERATORS = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const calculateExpression = (firstOperand, secondOperand, operator) => {
+  let result;
+
   try {
     switch (operator) {
       case '+':
-        return firstOperand + secondOperand;
+        result = firstOperand + secondOperand;
+        break;
       case '-':
-        return firstOperand - secondOperand;
+        result = firstOperand - secondOperand;
+        break;
       case '*':
-        return firstOperand * secondOperand;
+        result = firstOperand * secondOperand;
+        break;
       default:
         throw new Error(`Please specify one of the listed operators ${OPERATORS}`);
     }
   } catch (error) {
     console.log(error);
   }
+
+  return result;
 };
 
 const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
