@@ -3,6 +3,7 @@ import { getRandomNumberBetweenTwoValues } from '../utils.js';
 import startGame from '../index.js';
 
 const START_VALUE = 1;
+const END_VALUE = 8;
 const PROGRESSION_LENGTH = 10;
 const description = 'What number is missing in the progression?';
 
@@ -22,7 +23,7 @@ const getArithmeticProgression = (start, step, indexOfMissingInteger) => {
 };
 
 const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
-  const startInteger = getRandomNumberBetweenTwoValues(START_VALUE, PROGRESSION_LENGTH);
+  const startInteger = getRandomNumberBetweenTwoValues(START_VALUE, END_VALUE);
   const stepOfProgression = getRandomNumberBetweenTwoValues(START_VALUE, PROGRESSION_LENGTH);
   const indexOfMissingInteger = getRandomNumberBetweenTwoValues(0, PROGRESSION_LENGTH - 1);
 
