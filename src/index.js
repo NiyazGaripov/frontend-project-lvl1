@@ -15,17 +15,14 @@ const startGame = (gameConfig) => {
 
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (userAnswer === rightAnswer) {
-      console.log('Correct!');
-    } else {
+    if (userAnswer !== rightAnswer) {
       console.log(`${userAnswer} is wrong answer ;(. Correct answer was ${rightAnswer}.`);
       console.log(`Let's try again, ${userName}!`);
-      return false;
+      return;
     }
+    console.log('Correct!');
   }
-
   console.log(`Congratulations, ${userName}!`);
-  return true;
 };
 
 export default startGame;
