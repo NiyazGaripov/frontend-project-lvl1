@@ -19,7 +19,7 @@ const getArithmeticProgression = (start, step, indexOfMissingInteger) => {
     }
   }
 
-  return arithmeticProgression;
+  return arithmeticProgression.trim();
 };
 
 const gameData = new Array(QUESTION_COUNT).fill('').map(() => {
