@@ -9,4 +9,8 @@ describe('startGame', () => {
     jest.spyOn(console, 'log').mockImplementation(() => {});
     jest.spyOn(readlineSync, 'question').mockReturnValue('User Name');
   });
+
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
 });
