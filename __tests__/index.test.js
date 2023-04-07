@@ -13,4 +13,10 @@ describe('startGame', () => {
   afterEach(() => {
     jest.restoreAllMocks();
   });
+
+  it('should greet the user and ask for their name', () => {
+    startGame({ description: '', gameData: [] });
+    expect(console.log).toHaveBeenCalledWith('Welcome to the Brain Games!');
+    expect(console.log).toHaveBeenCalledWith('Hello, User Name!');
+  });
 });
