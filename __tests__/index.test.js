@@ -19,4 +19,17 @@ describe('startGame', () => {
     expect(console.log).toHaveBeenCalledWith('Welcome to the Brain Games!');
     expect(console.log).toHaveBeenCalledWith('Hello, User Name!');
   });
+
+  it('should display the game description and ask questions', () => {
+    const gameConfig = {
+      description: 'Description',
+      gameData: [
+        { question: 'Question1', rightAnswer: 'Answer1' },
+        { question: 'Question2', rightAnswer: 'Answer2' },
+        { question: 'Question3', rightAnswer: 'Answer3' },
+      ],
+    };
+    startGame(gameConfig);
+    expect(console.log).toHaveBeenCalledWith(gameConfig.description);
+  });
 });
